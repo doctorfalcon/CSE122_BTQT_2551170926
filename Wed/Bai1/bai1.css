@@ -1,0 +1,33 @@
+.khung-tho {
+    width: 480px;
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #FFFFE7;
+    border: 1px solid #9E9E9E;
+    text-align: center;
+}
+h1 {
+    margin: 0 0 14px;
+    background: #FFD9E6;
+    color: #D40000;
+    font-size: 24px;
+    font-weight: bold;
+}
+p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #0033CC;
+    font-style: italic;
+    line-height: 1.6;
+}
+.kho-do {
+    color: #D40000;
+}
+hr {
+    width: 55%;
+    margin: 10px auto;
+    border: 0;
+    border-top: 1px solid #0033CC;
+}
