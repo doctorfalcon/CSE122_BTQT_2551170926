@@ -1,0 +1,93 @@
+/* Tính kích thước gồm cả padding và đường viền */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 40px 16px;
+  background: #ffffff;
+  color: #222222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.khung {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0 0 24px;
+  color: #c2185b;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+.hai-cot {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.cot-anh {
+  flex: 0 0 180px;
+}
+.cot-anh img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.cot-noi-dung {
+  flex: 1;
+  min-width: 0;
+}
+h2 {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 10px;
+  background: #ffc0cb;
+  font-size: 18px;
+  font-weight: bold;
+}
+section + section {
+  margin-top: 20px;
+}
+ul {
+  margin: 0;
+  padding-left: 22px;
+}
+li {
+  margin-bottom: 6px;
+}
+.gioi-thieu {
+  list-style-type: square;
+}
+.lien-he {
+  list-style-type: circle;
+}
+.ban-quyen {
+  margin: 24px 0 0;
+  text-align: right;
+}
+.ban-quyen a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .hai-cot {
+    flex-direction: column;
+  }
+  .cot-anh {
+    flex: 0 1 auto;
+    width: 150px;
+    align-self: center;
+  }
+  .cot-noi-dung {
+    width: 100%;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .ban-quyen {
+    text-align: center;
+  }
+}

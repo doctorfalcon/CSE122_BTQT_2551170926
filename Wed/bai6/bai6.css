@@ -1,0 +1,60 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin: 0; 
+    padding : 30px 15px;
+}
+.khung{
+    max-width: 750px;
+    margin: auto;
+    padding: 25px 15px;
+    backgroung-color: #faf3df;
+}
+h1{
+    margin: 0 0 20px;
+    color: #e65100;
+    text-align: center;
+    font-size: 28px;
+}
+.noi-dung{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.anh-minh-hoa{
+    width: 28%;
+    height:auto;
+    border-box: 8px;
+}
+table{
+    flex: 1;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08)
+}
+th,
+td{
+    padding: 8ox;
+    text-align:left;
+    border-bottom: 1px solid #e0d6c2;
+}
+th{
+    background-color: #e65100;
+    color: #ffffff;
+}
+th::first-child,
+td::first-child{
+    width: 60px;
+    text-align: center;
+}
+td::first-child{
+}
+tbody tr:nth-child(odd){
+    background-color: #ffffff;
+}
+tbody tr:nth-child(even){
+    background-color: #fdf8ef;
+
+}
+
