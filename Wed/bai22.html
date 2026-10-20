@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chế độ Sáng / Tối</title>
+
+    <link rel="stylesheet" href="./bai22.css">
+    <script src="./bai22.js" defer></script>
+</head>
+<body>
+    <main class="ungDung">
+        <header class="dauTrang">
+            <h1>Chế độ Tối / Sáng</h1>
+
+            <button
+                type="button"
+                id="nutDoiCheDo"
+                class="congTac"
+                role="switch"
+                aria-checked="false"
+                aria-label="Chế độ tối"
+            >
+                <span class="nutTron" aria-hidden="true"></span>
+            </button>
+        </header>
+
+        <section class="theThongTin">
+            <h2>Biến CSS (CSS Variables)</h2>
+            <p>
+                Toàn bộ màu sắc được khai báo trong
+                <code>:root</code> và ghi đè bằng class
+                <code>.toi</code>.
+            </p>
+        </section>
+
+        <section class="theThongTin">
+            <h2>Chuyển đổi bằng JavaScript</h2>
+            <p>
+                Nút gạt thêm hoặc bỏ class <code>.toi</code>
+                trên thẻ <code>body</code>, giúp toàn bộ
+                giao diện đổi màu.
+            </p>
+        </section>
+
+        <section class="theThongTin">
+            <h2>Chuyển màu mượt</h2>
+            <p>
+                Sử dụng <code>transition</code> để màu nền,
+                màu chữ và đường viền thay đổi nhẹ nhàng.
+            </p>
+        </section>
+
+        <p id="trangThai" role="status" aria-live="polite">
+            Đây là giao diện ở chế độ SÁNG.
+        </p>
+    </main>
+</body>
+</html>

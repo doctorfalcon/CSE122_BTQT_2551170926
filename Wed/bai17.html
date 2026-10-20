@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17 - Đăng ký tài khoản</title>
+
+    <link rel="stylesheet" href="./bai17.css">
+    <script src="./bai17.js" defer></script>
+</head>
+<body>
+    <main class="khung">
+        <h1>Đăng ký tài khoản</h1>
+
+        <p class="moTa">
+            Dữ liệu được kiểm tra bằng JavaScript trước khi gửi.
+        </p>
+
+        <form id="formDangKy" novalidate>
+            <div class="nhomNhap">
+                <label for="hoTen">Họ và tên</label>
+
+                <input
+                    type="text"
+                    id="hoTen"
+                    name="hoTen"
+                    placeholder="Nhập họ và tên"
+                    autocomplete="name"
+                    aria-describedby="loiHoTen"
+                    required
+                >
+
+                <p id="loiHoTen" class="thongBao"></p>
+            </div>
+
+            <div class="nhomNhap">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Nhập email"
+                    autocomplete="email"
+                    aria-describedby="loiEmail"
+                    required
+                >
+
+                <p id="loiEmail" class="thongBao"></p>
+            </div>
+
+            <div class="nhomNhap">
+                <label for="matKhau">Mật khẩu</label>
+
+                <input
+                    type="password"
+                    id="matKhau"
+                    name="matKhau"
+                    placeholder="Nhập ít nhất 6 ký tự"
+                    autocomplete="new-password"
+                    minlength="6"
+                    aria-describedby="loiMatKhau"
+                    required
+                >
+
+                <p id="loiMatKhau" class="thongBao"></p>
+            </div>
+
+            <div class="nhomNhap">
+                <label for="xacNhan">Xác nhận mật khẩu</label>
+
+                <input
+                    type="password"
+                    id="xacNhan"
+                    name="xacNhan"
+                    placeholder="Nhập lại mật khẩu"
+                    autocomplete="new-password"
+                    aria-describedby="loiXacNhan"
+                    required
+                >
+
+                <p id="loiXacNhan" class="thongBao"></p>
+            </div>
+
+            <button type="submit">Đăng ký</button>
+
+            <p id="ketQua" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+</body>
+</html>

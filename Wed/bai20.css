@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 16px;
+    background: #101518;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.boLocSvg {
+    position: absolute;
+    pointer-events: none;
+}
+
+.ungDung {
+    width: 760px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.khungAnh {
+    width: 360px;
+    max-width: 100%;
+    margin: 0 auto 24px;
+    padding: 22px;
+    border-radius: 12px;
+    background: #1c2226;
+}
+
+#hoaHong {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transform-origin: center;
+}
+
+.loiNhan {
+    margin: 20px 0 0;
+    background: linear-gradient(
+        90deg,
+        #c99700,
+        #ffe681,
+        #ffd700,
+        #c99700
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 26px;
+    font-style: italic;
+}
+
+.thanhNut {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.thanhNut button {
+    padding: 9px 14px;
+    border: 1px solid #37434b;
+    border-radius: 6px;
+    background: #232b30;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.thanhNut button:hover {
+    background: #35424a;
+}
+
+.thanhNut button.dangChon {
+    border-color: #0d6efd;
+    background: #0d6efd;
+}
+
+.thanhNut button:focus-visible {
+    outline: 2px solid #ffd700;
+    outline-offset: 3px;
+}
+
+.hieuUng-gray {
+    filter: grayscale(1);
+}
+
+.hieuUng-xray {
+    filter: grayscale(1) invert(1);
+}
+
+.hieuUng-invert {
+    filter: invert(1);
+}
+
+.hieuUng-fliph {
+    transform: scaleX(-1);
+}
+
+.hieuUng-flipv {
+    transform: scaleY(-1);
+}
+
+.hieuUng-glow {
+    filter:
+        drop-shadow(0 0 6px #ffd700)
+        drop-shadow(0 0 14px #ff8c00);
+}
+
+.hieuUng-shadow {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.65);
+}
+
+.hieuUng-bold-shadow {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.85);
+}
+
+.hieuUng-drop-shadow {
+    filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.85));
+}
+
+.hieuUng-blur {
+    filter: blur(3px);
+}
+
+.hieuUng-wave {
+    filter: url("#hieuUngSong");
+}
+
+.hieuUng-mask {
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        #000 35%,
+        transparent 72%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        #000 35%,
+        transparent 72%
+    );
+}
+
+.hieuUng-alpha {
+    filter: opacity(0.4);
+}
+
+@media (max-width: 480px) {
+    .khungAnh {
+        padding: 18px;
+    }
+
+    .thanhNut {
+        gap: 6px;
+    }
+
+    .thanhNut button {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}

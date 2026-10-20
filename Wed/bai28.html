@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 28 - Khám phá điểm đến</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./bai28.css">
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        defer
+    ></script>
+</head>
+<body>
+    <main class="container py-5">
+        <h1 class="text-primary text-center mb-4">
+            Khám phá điểm đến
+        </h1>
+
+        <div
+            id="diemDenCarousel"
+            class="carousel slide rounded shadow-sm overflow-hidden"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+            aria-label="Ảnh các điểm đến"
+        >
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#diemDenCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Ảnh 1: Vịnh Hạ Long"
+                ></button>
+
+                <button
+                    type="button"
+                    data-bs-target="#diemDenCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Ảnh 2: Thác Bản Giốc"
+                ></button>
+
+                <button
+                    type="button"
+                    data-bs-target="#diemDenCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Ảnh 3: Fansipan"
+                ></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        src="./Anh/Bai28/1-vinh-ha-long.jpg"
+                        class="d-block w-100"
+                        alt="Phong cảnh Vịnh Hạ Long"
+                    >
+
+                    <div class="carousel-caption">
+                        <h2>Vịnh Hạ Long</h2>
+                        <p>Khám phá vẻ đẹp biển đảo và những đảo đá vôi.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img
+                        src="./Anh/Bai28/3-thac-ban-gioc.jpg"
+                        class="d-block w-100"
+                        alt="Thác Bản Giốc giữa núi rừng Cao Bằng"
+                    >
+
+                    <div class="carousel-caption">
+                        <h2>Thác Bản Giốc</h2>
+                        <p>Những tầng thác hùng vĩ giữa thiên nhiên xanh mát.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img
+                        src="./Anh/Bai28/6-phong-nha.jpg"
+                        class="d-block w-100"
+                        alt="Núi Fansipan giữa những tầng mây"
+                    >
+
+                    <div class="carousel-caption">
+                        <h2>Fansipan</h2>
+                        <p>Ngắm núi cao và biển mây trên dãy Hoàng Liên Sơn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#diemDenCarousel"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Ảnh trước</span>
+            </button>
+
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#diemDenCarousel"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Ảnh tiếp theo</span>
+            </button>
+        </div>
+
+        <ul
+            class="nav nav-pills justify-content-center gap-2 mt-4 mb-3"
+            id="tabDuLich"
+            role="tablist"
+            aria-label="Thông tin du lịch"
+        >
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link active"
+                    id="gioiThieuTab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#gioiThieu"
+                    type="button"
+                    role="tab"
+                    aria-controls="gioiThieu"
+                    aria-selected="true"
+                >
+                    Giới thiệu
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="lichTrinhTab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#lichTrinh"
+                    type="button"
+                    role="tab"
+                    aria-controls="lichTrinh"
+                    aria-selected="false"
+                >
+                    Lịch trình
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button
+                    class="nav-link"
+                    id="chiPhiTab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#chiPhi"
+                    type="button"
+                    role="tab"
+                    aria-controls="chiPhi"
+                    aria-selected="false"
+                >
+                    Chi phí
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content bg-white border rounded p-4">
+            <section
+                class="tab-pane fade show active"
+                id="gioiThieu"
+                role="tabpanel"
+                aria-labelledby="gioiThieuTab"
+                tabindex="0"
+            >
+                <p class="mb-0">
+                    Khám phá những danh thắng miền Bắc như Vịnh Hạ Long,
+                    Thác Bản Giốc và Fansipan. Mỗi điểm đến mang một vẻ đẹp
+                    riêng, từ biển đảo đến thác nước và núi cao.
+                </p>
+            </section>
+
+            <section
+                class="tab-pane fade"
+                id="lichTrinh"
+                role="tabpanel"
+                aria-labelledby="lichTrinhTab"
+                tabindex="0"
+            >
+                <h2 class="h6">Lịch trình tham khảo cho một điểm đến</h2>
+
+                <ul class="mb-0">
+                    <li>Ngày 1: Di chuyển, nhận phòng và khám phá khu vực.</li>
+                    <li>Ngày 2: Tham quan các điểm nổi bật và thưởng thức ẩm thực.</li>
+                    <li>Ngày 3: Mua quà lưu niệm, trả phòng và trở về.</li>
+                </ul>
+            </section>
+
+            <section
+                class="tab-pane fade"
+                id="chiPhi"
+                role="tabpanel"
+                aria-labelledby="chiPhiTab"
+                tabindex="0"
+            >
+                <p>Chi phí cần dự trù gồm:</p>
+
+                <ul>
+                    <li>Phương tiện di chuyển.</li>
+                    <li>Khách sạn và ăn uống.</li>
+                    <li>Vé tham quan và các dịch vụ trải nghiệm.</li>
+                </ul>
+
+                <p class="mb-0 text-secondary">
+                    Tổng chi phí phụ thuộc vào điểm đến, thời gian
+                    và dịch vụ lựa chọn.
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

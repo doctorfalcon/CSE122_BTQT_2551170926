@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 24px 16px;
+    background: #f5f5f5;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+.trang {
+    display: grid;
+
+    grid-template-columns: 200px minmax(0, 1fr) 160px;
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas:
+        "banner banner banner"
+        "menu noidung quangcao";
+
+    max-width: 1100px;
+    min-height: 650px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.banner {
+    grid-area: banner;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    min-height: 90px;
+    padding: 18px 22px;
+
+    background-color: #c62828;
+    background-image:
+        linear-gradient(
+            rgba(198, 40, 40, 0.8),
+            rgba(198, 40, 40, 0.8)
+        ),
+        url("./Anh/Bai21/Nen_banner.jpg");
+    background-position: center;
+    background-size: cover;
+
+    color: #fff;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.menuTrai {
+    grid-area: menu;
+    background: linear-gradient(to bottom, #c62828, #8e0000);
+}
+
+.menuTrai ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menuTrai a {
+    display: block;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.menuTrai a:hover,
+.menuTrai a:focus-visible {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.noiDung {
+    grid-area: noidung;
+    min-width: 0;
+    padding: 22px;
+    background: #fff;
+}
+
+.baiHoc {
+    margin-bottom: 30px;
+    scroll-margin-top: 20px;
+}
+
+.baiHoc:last-child {
+    margin-bottom: 0;
+}
+
+.baiHoc h2 {
+    margin: 0 0 14px;
+    color: #c62828;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.menuCon {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    background: #ffe082;
+}
+
+.menuCon ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+
+    margin: 0;
+    padding-left: 18px;
+}
+
+.menuCon a {
+    color: #222;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.menuCon a:hover,
+.menuCon a:focus-visible {
+    text-decoration: underline;
+}
+
+.hopNoiDung {
+    padding: 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.hopNoiDung p {
+    margin: 0 0 12px;
+}
+
+.hopNoiDung p:last-child {
+    margin-bottom: 0;
+}
+
+.loiChao {
+    text-align: center;
+}
+
+.quangCao {
+    grid-area: quangcao;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 22px 10px;
+    background: #fff;
+}
+.quangCao img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+@media (max-width: 760px) {
+    body {
+        padding: 12px;
+    }
+
+    .trang {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            "banner"
+            "menu"
+            "noidung"
+            "quangcao";
+    }
+
+    .banner {
+        padding: 16px;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 48px;
+    }
+
+    .noiDung {
+        padding: 18px;
+    }
+
+    .quangCao {
+        align-items: center;
+        padding: 18px;
+    }
+
+    .quangCao img {
+        max-width: 300px;
+    }
+}

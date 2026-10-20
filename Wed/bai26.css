@@ -1,0 +1,61 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: #e9ecef;
+    color: #212529;
+}
+
+.card {
+    max-width: 720px;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+.card-header h1 {
+    line-height: 1.5;
+}
+
+.form-control,
+.form-select {
+    min-height: 44px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.form-check-input,
+.form-check-label {
+    cursor: pointer;
+}
+
+.btn {
+    min-height: 40px;
+}
+
+#ketQua {
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .card-header h1 {
+        font-size: 20px;
+    }
+
+    .card-body {
+        padding: 20px !important;
+    }
+}

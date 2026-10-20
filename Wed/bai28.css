@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f8f9fa;
+    color: #212529;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.carousel-item img {
+    height: 340px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    right: 18%;
+    bottom: 38px;
+    left: 18%;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.carousel-caption h2 {
+    margin-bottom: 6px;
+    font-size: 23px;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 12%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.35);
+    background-size: 60%;
+}
+
+.nav-pills .nav-link {
+    padding: 10px 18px;
+}
+
+.tab-content {
+    line-height: 1.8;
+}
+
+.tab-content li {
+    margin-bottom: 6px;
+}
+
+.tab-content li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .carousel-caption {
+        right: 14%;
+        left: 14%;
+        padding: 12px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 20px;
+    }
+
+    .carousel-caption p {
+        font-size: 13px;
+    }
+
+    .nav-pills .nav-link {
+        padding: 9px 12px;
+    }
+}

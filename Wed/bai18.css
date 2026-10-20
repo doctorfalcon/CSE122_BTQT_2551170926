@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    background: #fff;
+    color: #222;
+    font-family: "Times New Roman", serif;
+}
+
+.trang {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 28px;
+    background: #fffdf6;
+}
+
+h1 {
+    margin: 0;
+    color: #e65100;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.phuDe {
+    margin: 0 0 18px;
+    color: #e65100;
+    font-size: 19px;
+}
+
+.noiDung {
+    display: flow-root;
+}
+
+.noiDung p {
+    margin: 0 0 16px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.anhHoa {
+    float: right;
+    width: 32%;
+    height: auto;
+    margin: 0 0 16px 22px;
+    border-radius: 8px;
+}
+
+.doanDau::first-letter {
+    float: left;
+    margin: 3px 6px 0 0;
+    color: #e65100;
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 0.9;
+}
+
+.huongVi {
+    margin-top: 18px;
+    padding: 16px 20px;
+    border: 2px solid #2e7d32;
+    border-radius: 7px;
+    background: #f4fbf4;
+}
+
+.huongVi h2 {
+    margin: 0 0 10px;
+    color: #2e7d32;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.danhSachMon {
+    margin: 0;
+    padding-left: 22px;
+    columns: 2;
+    column-gap: 36px;
+    list-style-type: disc;
+    list-style-image: url("./Anh/Bai18/icon_list_c.gif");
+}
+
+.danhSachMon li {
+    padding: 3px 0;
+    font-size: 17px;
+    line-height: 1.5;
+    break-inside: avoid;
+}
+
+@media (max-width: 600px) {
+    .trang {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .anhHoa {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 0 0 18px;
+    }
+
+    .danhSachMon {
+        columns: 1;
+    }
+}

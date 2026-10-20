@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE.TLU Travel</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./bai25.css">
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        defer
+    ></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#trang-chu">
+                CSE.TLU Travel
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuChinh"
+                aria-controls="menuChinh"
+                aria-expanded="false"
+                aria-label="Mở hoặc đóng menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuChinh">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trang-chu">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diem-den">Điểm đến</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="#hopThoaiTour"
+                            data-bs-toggle="modal"
+                        >Tour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lien-he">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="trang-chu" class="container py-5">
+        <section class="hero bg-white rounded shadow-sm text-center p-4 p-md-5 mb-4">
+            <h1 class="text-primary fw-bold">Khám phá Việt Nam</h1>
+
+            <p class="mb-4">
+                Hành trình qua những kỳ quan thiên nhiên đẹp nhất đất nước.
+            </p>
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#hopThoaiTour"
+            >
+                Đặt tour ngay
+            </button>
+        </section>
+
+        <section id="diem-den" aria-label="Các điểm đến nổi bật">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="card h-100 shadow-sm">
+                        <img
+                            src="./Anh/Bai25/1-vinh-ha-long.jpg"
+                            class="card-img-top"
+                            alt="Phong cảnh Vịnh Hạ Long"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">Vịnh Hạ Long</h2>
+
+                            <p class="card-text">
+                                Những đảo đá vôi giữa làn nước xanh tạo nên
+                                cảnh quan đặc trưng của Quảng Ninh.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-primary btn-sm mt-auto align-self-start"
+                                data-bs-toggle="modal"
+                                data-bs-target="#chiTietHaLong"
+                            >
+                                Xem thêm
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="card h-100 shadow-sm">
+                        <img
+                            src="./Anh/Bai25/3-thac-ban-gioc.jpg"
+                            class="card-img-top"
+                            alt="Thác Bản Giốc giữa núi rừng"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">Thác Bản Giốc</h2>
+
+                            <p class="card-text">
+                                Những tầng thác trắng xóa giữa núi rừng
+                                tạo nên cảnh sắc hùng vĩ của Cao Bằng.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-primary btn-sm mt-auto align-self-start"
+                                data-bs-toggle="modal"
+                                data-bs-target="#chiTietBanGioc"
+                            >
+                                Xem thêm
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="card h-100 shadow-sm">
+                        <img
+                            src="./Anh/Bai25/4-fansipan.jpg"
+                            class="card-img-top"
+                            alt="Núi Fansipan giữa những tầng mây"
+                        >
+
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">Fansipan</h2>
+
+                            <p class="card-text">
+                                “Nóc nhà Đông Dương” nổi bật với núi cao
+                                và những biển mây tại Lào Cai.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-primary btn-sm mt-auto align-self-start"
+                                data-bs-toggle="modal"
+                                data-bs-target="#chiTietFansipan"
+                            >
+                                Xem thêm
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="lien-he" class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">© CSE.TLU Travel — Bài thực hành Lập trình Web</p>
+        </div>
+    </footer>
+
+    <div
+        class="modal fade"
+        id="hopThoaiTour"
+        tabindex="-1"
+        aria-labelledby="tieuDeTour"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tieuDeTour">
+                        Khám phá các điểm đến
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Đóng"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Các điểm đến được giới thiệu:</p>
+                    <ul>
+                        <li>Vịnh Hạ Long</li>
+                        <li>Thác Bản Giốc</li>
+                        <li>Fansipan</li>
+                    </ul>
+                    <p class="text-secondary mb-0">
+                        Đây là trang thực hành, chưa hỗ trợ đặt tour thực tế.
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                    >Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="modal fade"
+        id="chiTietHaLong"
+        tabindex="-1"
+        aria-labelledby="tieuDeHaLong"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tieuDeHaLong">
+                        Vịnh Hạ Long
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Đóng"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="mb-0">
+                        Vịnh Hạ Long nổi bật với những đảo đá vôi,
+                        hang động và cảnh biển. Du khách có thể
+                        ngắm cảnh trên vịnh và khám phá các điểm
+                        tham quan bằng tàu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="modal fade"
+        id="chiTietBanGioc"
+        tabindex="-1"
+        aria-labelledby="tieuDeBanGioc"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tieuDeBanGioc">
+                        Thác Bản Giốc
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Đóng"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="mb-0">
+                        Thác Bản Giốc nằm tại Cao Bằng, nổi bật với
+                        các tầng nước đổ giữa khung cảnh núi rừng.
+                        Đây là điểm đến để ngắm cảnh và chụp ảnh thiên nhiên.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="modal fade"
+        id="chiTietFansipan"
+        tabindex="-1"
+        aria-labelledby="tieuDeFansipan"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tieuDeFansipan">
+                        Fansipan
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Đóng"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="mb-0">
+                        Fansipan thuộc dãy Hoàng Liên Sơn,
+                        được biết đến với tên gọi “Nóc nhà Đông Dương”.
+                        Cảnh núi cao và những tầng mây tạo nên
+                        nét đặc trưng của điểm đến này.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #fff;
+    color: #0f172a;
+    font-family: Arial, sans-serif;
+}
+
+.thuVien {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    background: #f8fafc;
+}
+
+.tieuDe {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.tieuDe h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.tieuDe p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.luoiAnh {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.oAnh {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    background: #cbd5e1;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.oAnh img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.oAnh figcaption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    background: linear-gradient(
+        to bottom,
+        transparent 35%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.oAnh:hover img,
+.oAnh:focus img {
+    transform: scale(1.12);
+}
+
+.oAnh:hover figcaption,
+.oAnh:focus figcaption {
+    opacity: 1;
+}
+
+.oAnh:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+    .luoiAnh {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .thuVien {
+        padding: 20px 14px;
+    }
+
+    .tieuDe h1 {
+        font-size: 23px;
+    }
+
+    .luoiAnh {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (hover: none) {
+    .oAnh figcaption {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .oAnh img,
+    .oAnh figcaption {
+        transition: none;
+    }
+}

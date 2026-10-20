@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 10 - Form liên hệ</title>
+  <link rel="stylesheet" href="bai10.css">
+</head>
+<body>
+  <main class="contact-card">
+    <header class="form-header">
+      <h1>Liên hệ với chúng tôi</h1>
+      <p>
+        Vui lòng điền thông tin bên dưới,
+        chúng tôi sẽ phản hồi trong 24 giờ.
+      </p>
+    </header>
+    <form action="#" method="post" class="contact-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="fullname">Họ và tên</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Nguyễn Văn An"
+            autocomplete="name"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="an.nv@tlu.edu.vn"
+            autocomplete="email"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="phone">Số điện thoại</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="0987 654 321"
+            autocomplete="tel"
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="subject">Chủ đề</label>
+          <select id="subject" name="subject">
+            <option value="course">Hỏi về khóa học</option>
+            <option value="assignment">Hỏi về bài tập</option>
+            <option value="feedback">Góp ý</option>
+            <option value="other">Khác</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group message-group">
+        <label for="message">Nội dung</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Em muốn hỏi về lịch nộp bài tập môn Lập trình Web ạ."
+          required
+        ></textarea>
+      </div>
+      <div class="agreement">
+        <input
+          type="checkbox"
+          id="agree"
+          name="agree"
+          value="yes"
+          required
+        >
+        <label for="agree">
+          Tôi đồng ý nhận email phản hồi.
+        </label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">
+          Gửi liên hệ
+        </button>
+        <button type="reset" class="btn-reset">
+          Nhập lại
+        </button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+}
+
+.bangGia {
+    width: 1050px;
+    max-width: 100%;
+    padding: 36px 24px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.tieuDe {
+    margin-bottom: 38px;
+    text-align: center;
+}
+
+.tieuDe h1 {
+    margin: 0 0 10px;
+    font-size: 30px;
+}
+
+.tieuDe p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.danhSachGoi {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.goi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.goi:hover,
+.goi:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+}
+
+.goi.hot {
+    border-color: #4f46e5;
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(79, 70, 229, 0.2);
+}
+
+.goi.hot:hover,
+.goi.hot:focus-within {
+    transform: translateY(-16px);
+    box-shadow: 0 22px 36px rgba(79, 70, 229, 0.28);
+}
+
+.nhan {
+    display: inline-block;
+    padding: 5px 13px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.goi h2 {
+    margin: 14px 0 8px;
+    font-size: 21px;
+}
+
+.gia {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    margin: 0 0 22px;
+}
+
+.gia strong {
+    font-size: 44px;
+    line-height: 1.2;
+}
+
+.gia span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.quyenLoi {
+    width: 100%;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.quyenLoi li {
+    margin-bottom: 9px;
+}
+
+.quyenLoi li:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.goi button {
+    width: 100%;
+    margin-top: auto;
+    background: #f1f5f9;
+    color: #334155;
+}
+
+.goi button:hover {
+    background: #e2e8f0;
+}
+
+.goi.hot button,
+dialog button {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.goi.hot button:hover,
+dialog button:hover {
+    background: #4338ca;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:focus-visible {
+    outline: 3px solid #818cf8;
+    outline-offset: 4px;
+}
+
+dialog {
+    width: 420px;
+    max-width: calc(100% - 32px);
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #fff;
+    color: #1e293b;
+}
+
+dialog::backdrop {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+dialog h2 {
+    margin: 0 0 14px;
+    color: #4338ca;
+}
+
+dialog p {
+    line-height: 1.6;
+}
+
+.ghiChu {
+    color: #64748b;
+    font-size: 14px;
+}
+
+dialog form {
+    margin-top: 20px;
+    text-align: right;
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .bangGia {
+        padding: 28px 16px;
+    }
+
+    .danhSachGoi {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .goi.hot {
+        transform: none;
+    }
+
+    .goi.hot:hover,
+    .goi.hot:focus-within {
+        transform: translateY(-6px);
+    }
+
+    .tieuDe h1 {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .goi,
+    button {
+        transition: none;
+    }
+}

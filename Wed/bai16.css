@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    background: #f5f5fa;
+    color: #111827;
+    font-family: Arial, sans-serif;
+}
+
+.ungDung {
+    width: 600px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tieuDe {
+    padding: 20px 24px;
+    background: #6d28d9;
+    color: #fff;
+}
+
+.tieuDe h1 {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.tieuDe p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ede9fe;
+}
+
+#formThem {
+    display: flex;
+    gap: 10px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #ede9fe;
+}
+
+#nhapViec {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #ddd6fe;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#nhapViec:focus {
+    outline: none;
+    border-color: #6d28d9;
+    box-shadow: 0 0 0 2px #ede9fe;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+#nutThem {
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: #6d28d9;
+    color: #fff;
+    font-size: 14px;
+}
+
+#nutThem:hover {
+    background: #5b21b6;
+}
+
+#thongBao {
+    margin: 12px 24px 0;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+#thongBao:empty {
+    display: none;
+}
+
+#danhSach {
+    margin: 0;
+    padding: 6px 24px;
+    list-style: none;
+}
+
+.congViec {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px dashed #ede9fe;
+}
+
+.nhanViec {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.oDanhDau {
+    appearance: none;
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    border: 2px solid #a78bfa;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.oDanhDau:checked {
+    border-color: #6d28d9;
+    background: #6d28d9;
+}
+
+.oDanhDau:checked::after {
+    content: "✓";
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.noiDungViec {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.congViec.hoanThanh .noiDungViec {
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.nutXoa {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #fde2e2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.nutXoa:hover {
+    background: #fecaca;
+}
+
+button:focus-visible,
+.oDanhDau:focus-visible {
+    outline: 2px solid #6d28d9;
+    outline-offset: 3px;
+}
+
+#soViec {
+    margin: 0;
+    padding: 24px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (max-width: 420px) {
+    .tieuDe,
+    #formThem {
+        padding: 18px 16px;
+    }
+
+    #danhSach {
+        padding: 6px 16px;
+    }
+
+    #nutThem {
+        padding: 12px 16px;
+    }
+
+    #soViec {
+        padding: 20px 16px;
+    }
+}

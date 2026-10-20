@@ -1,0 +1,108 @@
+/* Thiết lập chung */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #edf2f7;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* Thẻ hồ sơ gồm hai cột */
+.cv {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Cột trái */
+.sidebar {
+  background: linear-gradient(#1565c0, #0d3f7a);
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 22px;
+}
+
+/* Ảnh đại diện vẽ bằng CSS */
+.avatar {
+  width: 110px;
+  height: 110px;
+  background: #ffffff;
+  color: #1565c0;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 14px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.job {
+  font-size: 14px;
+}
+
+.contact {
+  list-style: none;
+  text-align: left;
+  margin-top: 24px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.contact li {
+  margin-bottom: 6px;
+}
+.content {
+  padding: 26px 30px;
+  min-width: 0;
+}
+section {
+  margin-bottom: 18px;
+}
+section:last-child {
+  margin-bottom: 0;
+}
+h2 {
+  color: #1565c0;
+  font-size: 17px;
+  border-bottom: 2px solid #e3effb;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+.content p {
+  font-size: 14px;
+}
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skills li {
+  background: #e3f0ff;
+  color: #0d3f7a;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+a {
+  color: #1565c0;
+}
+

@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #fff;
+    color: #212529;
+}
+
+.container {
+    max-width: 1050px;
+}
+
+.khungBang {
+    padding: 28px;
+    background: #f8f9fa;
+}
+
+.table {
+    min-width: 680px;
+    --bs-table-striped-bg: #f8f9fa;
+    --bs-table-hover-bg: #e9ecef;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+}
+
+.table thead th {
+    white-space: nowrap;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(4) {
+    white-space: nowrap;
+}
+
+.table tbody {
+    background: #fff;
+}
+
+.badge {
+    font-size: 12px;
+}
+
+.page-link {
+    min-width: 40px;
+    text-align: center;
+}
+
+.page-link:focus-visible {
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 575.98px) {
+    .khungBang {
+        padding: 18px 12px;
+    }
+
+    h1.h4 {
+        font-size: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+}

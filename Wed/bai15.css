@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+.mayTinh {
+    width: 440px;
+    max-width: 100%;
+    padding: 24px;
+    border-radius: 16px;
+    background: #111827;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.manHinh {
+    min-height: 130px;
+    margin-bottom: 18px;
+    padding: 18px;
+    border-radius: 14px;
+    background: #022c22;
+    color: #4ade80;
+    text-align: right;
+}
+
+#phepTinh {
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    color: #4ade80;
+    caret-color: #4ade80;
+    font-family: monospace;
+    font-size: 22px;
+    text-align: right;
+}
+
+#phepTinh:focus {
+    outline: none;
+    border-bottom-color: #4ade80;
+}
+
+#phepTinh::placeholder {
+    color: #4ade80;
+    opacity: 0.5;
+}
+
+#ketQua {
+    margin-top: 10px;
+    font-family: monospace;
+    font-size: 42px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+#ketQua.loi {
+    color: #fca5a5;
+    font-size: 20px;
+}
+
+.banPhim {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+button {
+    min-height: 64px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #25313f;
+    color: #e5e7eb;
+    font-size: 26px;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.15s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 2px;
+}
+
+.phepToan {
+    background: #0d6efd;
+    color: #fff;
+}
+
+.xoa {
+    background: #dc2626;
+    color: #fff;
+}
+
+.bang {
+    background: #16a34a;
+    color: #fff;
+}
+
+.soKhong {
+    grid-column: span 2;
+}
+
+@media (max-width: 380px) {
+    .mayTinh {
+        padding: 16px;
+    }
+
+    .banPhim {
+        gap: 8px;
+    }
+
+    button {
+        min-height: 54px;
+        font-size: 22px;
+    }
+
+    #phepTinh {
+        font-size: 18px;
+    }
+
+    #ketQua {
+        font-size: 34px;
+    }
+}
